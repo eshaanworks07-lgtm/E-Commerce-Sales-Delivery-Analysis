@@ -1,32 +1,50 @@
-# E-Commerce Sales & Delivery Analysis
+E-Commerce Sales & Delivery Analysis
 
-## Business Problem
-Leadership at an online marketplace wants to know two things: is revenue trending up or down month over month, and are late deliveries a real, measurable problem worth operational attention — or just noise.
+Business Problem
 
-## Dataset
-Brazilian E-Commerce Public Dataset by Olist (Kaggle) — orders and order items tables, ~54K delivered orders, Sep 2016 - Aug 2018.
+I wanted to look at two main things in the Olist e-commerce data:
 
-## Tools
-- **SQL (MySQL)** — JOINs, GROUP BY, HAVING, CASE WHEN, date functions (DATEDIFF, DATE_FORMAT)
-- **Excel** — PivotTables, SUMIFS/COUNTIFS, conditional formatting, dashboard design
+1. Is revenue generally going up or down over time?
+2. Are late deliveries actually a big enough problem to be concerned about?
 
-## Key Questions Answered
-- Is revenue trending up or down month over month?
-- Are late deliveries a real, measurable problem, and is it improving or worsening over time?
+I used SQL to explore the data and then used Excel to organize the results and build a small dashboard.
 
-## Key Insights
-1. **Revenue grew roughly 8x** between Jan 2017 (R$63.7K) and a Nov 2017 peak (R$565K), then **plateaued through 2018** (R$459K-551K/month) instead of continuing to climb — a trend-shift, not a straight growth story.
-2. **Overall late-delivery rate is 8.02% of orders**, and 8.68% of revenue — late orders skew slightly higher in value than the average order.
-3. Late % isn't steady month to month — it spikes to **14.43% in Nov 2017** (alongside the order-volume surge, likely Black Friday) and to **15.78%-20.80% in Feb-Mar 2018**, the two worst months in the dataset by a wide margin, with no confirmed cause identified.
-4. **Scope note:** this analysis uses only the orders and order_items tables. Whether late delivery measurably lowers review scores, or whether the Feb-Mar 2018 spike was concentrated in specific regions, would need the reviews/customers tables — flagged as a natural next step, not chased down here.
+Dataset
 
-## Recommendation
-Investigate what changed in Feb-Mar 2018 specifically, since it's the clearest anomaly in the data — before assuming ~8% is a stable, static late-delivery baseline going forward.
+Brazilian E-Commerce Public Dataset by Olist (Kaggle)
 
-## Dashboard
-![dashboard](screenshots/dashboard.png)
+I mainly worked with the orders and order items tables, covering around 54K delivered orders from September 2016 to August 2018.
 
-## Files in this repo
-- `queries.sql` — all SQL, organized by section, commented
-- `dashboard.xlsx` — Excel dashboard (KPIs, monthly revenue trend, late vs. on-time revenue split)
-- `screenshots/dashboard.png` — dashboard preview
+Tools
+
+- SQL (MySQL) — JOINs, GROUP BY, HAVING, CASE WHEN, subqueries, DATEDIFF and DATE_FORMAT
+- Excel — PivotTables, COUNTIFS, SUMIFS, charts and dashboard
+
+Key Questions
+
+- Is revenue going up or down over time?
+- How common are late deliveries?
+- Is the late delivery rate getting better or worse?
+- Do late deliveries seem to affect customer review scores?
+
+Key Insights
+
+1. Revenue grew quite a lot during 2017. It went from around 63.7K in January 2017 to around 565K in November 2017. After that, revenue stayed relatively high but fluctuated through 2018 instead of continuing to grow steadily.
+
+2. Around 8.02% of delivered orders were late. Late orders also made up around 8.7% of the total order value, so their share of revenue was slightly higher than their share of orders.
+
+3. The late delivery rate was around 3–7% in most months, but there were some noticeable spikes. It reached 14.43% in November 2017 and then went up even more in February and March 2018, reaching 15.78% and 20.80%. I couldn't find a clear reason for the February–March spike from the data I had, so I think that would be worth looking into further.
+
+4. Late deliveries also had a much lower average review score. Late orders had an average score of 2.67 compared with 4.17 for on-time orders. This suggests there could be a link between delivery delays and customer satisfaction, although this analysis doesn't prove that late delivery directly caused the lower scores.
+
+Recommendation
+
+The main thing I'd investigate next is what happened in February and March 2018. The late delivery rate was much higher than normal during these two months, and it would be useful to check if the problem was concentrated in certain states, sellers or product categories.
+
+Dashboard
+
+Files in this repo
+
+- queries.sql — SQL queries used for the analysis
+- dashboard.xlsx — Excel dashboard with KPIs, monthly revenue trend and late vs. on-time revenue
+- screenshots/dashboard.png — dashboard preview
