@@ -41,8 +41,6 @@ Recommendation
 
 The main thing I'd investigate next is what happened in February and March 2018. The late delivery rate was much higher than normal during these two months, and it would be useful to check if the problem was concentrated in certain states, sellers or product categories.
 
-Dashboard
-
 Files in this repo
 
 - OLIST-ECOMMERCE-PROJECT.sql — SQL queries used for the analysis
