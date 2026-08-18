@@ -45,6 +45,6 @@ Dashboard
 
 Files in this repo
 
-- queries.sql — SQL queries used for the analysis
-- dashboard.xlsx — Excel dashboard with KPIs, monthly revenue trend and late vs. on-time revenue
-- screenshots/dashboard.png — dashboard preview
+- OLIST-ECOMMERCE-PROJECT.sql — SQL queries used for the analysis
+- olist excel insight.xlsx — Excel dashboard with KPIs, monthly revenue trend and late vs. on-time revenue
+- DASHBOARD SCREENSHOT.png — dashboard preview
