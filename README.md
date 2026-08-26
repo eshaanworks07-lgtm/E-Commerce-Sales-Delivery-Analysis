@@ -43,7 +43,9 @@ The main thing I'd investigate next is what happened in February and March 2018.
 
 DASHBOARD
 
+## Dashboard
 
+![Dashboard Preview](DASHBOARD-SCREENSHOT.png)
 
 
 Files in this repo
