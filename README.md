@@ -29,7 +29,7 @@ Key Questions
 
 Key Insights
 
-1. Revenue grew quite a lot during 2017. It went from around 63.7K in January 2017 to around 565K in November 2017. After that, revenue stayed relatively high but fluctuated through 2018 instead of continuing to grow steadily.
+1. Revenue grew quite a lot during 2017, Reaching it highest in November 2017. After that, revenue stayed relatively high but fluctuated through 2018 instead of continuing to grow steadily.
 
 2. Around 8.02% of delivered orders were late. Late orders also made up around 8.7% of the total order value, so their share of revenue was slightly higher than their share of orders.
 
